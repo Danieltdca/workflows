@@ -1,5 +1,4 @@
 name: Keep Alive
-
 on:
   schedule:
     - cron: "*/10 * * * *"
