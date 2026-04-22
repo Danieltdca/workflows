@@ -10,6 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Enviando ping para Render
+      - name: Enviar ping para Render
         run: |
-          curl -s https://www.patertechnologies.com.br/blog/ | grep "HTTP/"
+          curl -s https://www.patertechnologies.com.br/blog/
