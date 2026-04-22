@@ -1,0 +1,11 @@
+name: Ping Website
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+jobs:
+  ping:
+    runs-on: ubunto-latest
+    steps:
+      - name: Ping the site
+        run: curl -I https://www.patertechnologies.com.br/blog/
