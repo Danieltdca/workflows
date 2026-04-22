@@ -1,10 +1,15 @@
+name: Keep Alive
+
 on:
   schedule:
-    - cron: '*10/****'
-    workflow_dispatch:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
 jobs:
   ping:
     runs-on: ubuntu-latest
+
     steps:
-    -name: Enviando ping para render
-    run: | curl -sl https://www.patertechnologies.com.br/blog/ |grep "HTTP/"
+      - name: Enviando ping para Render
+        run: |
+          curl -s https://www.patertechnologies.com.br/blog/ | grep "HTTP/"
